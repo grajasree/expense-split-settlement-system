@@ -9,11 +9,12 @@ from config import Config
 def get_connection():
     """Open a new connection to MySQL."""
     return mysql.connector.connect(
-        host=Config.DB_HOST,
-        port=Config.DB_PORT,
-        user=Config.DB_USER,
-        password=Config.DB_PASSWORD,
-        database=Config.DB_NAME,
+    host=Config.DB_HOST,
+    port=Config.DB_PORT,
+    user=Config.DB_USER,
+    password=Config.DB_PASSWORD,
+    database=Config.DB_NAME,
+    ssl_disabled=False
     )
 
 
